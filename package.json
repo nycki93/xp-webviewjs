@@ -1,0 +1,17 @@
+{
+  "name": "xp-webviewjs",
+  "version": "1.0.0",
+  "main": "app/main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app/main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@webviewjs/webview": "^0.1.3"
+  }
+}
