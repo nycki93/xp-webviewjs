@@ -3,8 +3,11 @@ import { parentPort } from 'node:worker_threads';
 
 const server = createServer((req, res) => {
   parentPort.postMessage({ log: `GET ${req.url}`});
-  res.writeHead(200, { 'content-type': 'text/html' });
-  res.write('<html><body>hello from server</body></html>');
+  res.writeHead(200, { 
+    'content-type': 'text/json',
+    'access-control-allow-origin': '*',
+  });
+  res.write(`{"api":"v0.1.0"}`);
   res.end();
 });
 
